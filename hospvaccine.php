@@ -116,7 +116,11 @@ $run_querys = mysqli_query($conn , $select_querys);
 
 
     while ($fetch_datas =mysqli_fetch_array($run_querys)
-) {     ?>
+) {    if ($fetch_datas['Vqty'] == '0') {
+    
+}else {
+    # code...
+ ?>
     <tr>
       <td><h5><?php echo $fetch_datas['Vname']?></h5></td>
       <td><h5><?php echo $fetch_datas['Vtype']?></h5></td>
@@ -137,7 +141,7 @@ $run_querys = mysqli_query($conn , $select_querys);
 
 
     </tr>
-<?php } ?>
+<?php }} ?>
 
   </tbody>
 </table>

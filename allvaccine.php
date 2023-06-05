@@ -51,7 +51,7 @@ if (isset($_SESSION['hospital_name']) || isset($_SESSION['parent_id'])) {
 
             <?php  
         while ($row = mysqli_fetch_array($q_run )) { ?>
-
+       
             <tr>
 
                 <td> <?php echo $row['Vname'] ?> </td>

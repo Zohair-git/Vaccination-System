@@ -10,7 +10,7 @@ $fetch_data = mysqli_fetch_array($run_it);
 
 $s_q = "SELECT *
 FROM book_appointment
-WHERE appointment_date >= date_sub(now(), interval 1 week) AND Pname = '$p_id'";
+WHERE appointment_date > date_sub(now(), interval 1 week) AND Pname = '$p_id'";
 $run = mysqli_query($conn , $s_q);
 
 
